@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+    <!-- Молодець, що завантажив шрифти :) -->
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Ride Craft</title>
@@ -21,11 +22,22 @@
   </head>
   <body class="flex flex-column">
     <header class="header inter-font">
+      <!-- ----------------1--------------- -->
       <!-- logo -->
       <button class="logo" type="button">
         <img src="assets/favicon.png" />
         <span>RideEasy</span>
+        <!-- Даний лого (а також всі іконки)
+        краще задати як svg картинку, бо
+        вона має кращу якість при різних розмірах екрану -->
+        <!-- Бо svg векторне зображення, а png растрове
+        Різниця між цими видами зображень: 
+        https://www.youtube.com/watch?v=1vUG2AbZTnI -->
+        <!-- <svg class="logo" width="124px" height="40px">
+          <use href="./images/icons/sprite.svg#icon-logo" />
+        </svg> -->
       </button>
+      <!-- ----------------1--------------- -->
 
       <!-- actions -->
       <ul class="actions space-x-8">
@@ -48,6 +60,7 @@
         <button type="button">Sign up</button>
       </div>
     </header>
+
     <main class="main cabin-font">
       <article class="main-article">
         <h1>
@@ -58,16 +71,49 @@
           Embrace life's vastness, venture forth, and discover the wonders
           waiting beyond. The world beckons; seize its grand offerings now!
         </p>
+
+        <!-- ----------------2--------------- -->
         <div class="download-buttons">
-          <button type="button" class="app-store">
+          <button type="button" class="download-button app-store">
             <img src="/assets/app-store.png" />
+            <!-- Зміни на svg -->
+            <!-- <svg class="icon-apple" width="33px" height="38px">
+              <use href="./images/icons/sprite.svg#icon-apple" />
+            </svg> -->
+            <!-- І сам текст, та стилі колір фону, border-radius: 10px;, 
+            padding: 18px 28px;, display: flex;, column-gap: 25px;
+            краще додати вручну, тоді буде краща якість тексту 
+            та країв елементу -->
+            <!-- Задай ці стилі для класу download-button -->
           </button>
-          <button type="button" class="google-play">
+          <button type="button" class="download-button google-play">
             <img src="/assets/google-play.png" />
+            <!-- <svg class="icon-google-play" width="35px" height="38px">
+              <use href="./images/icons/sprite.svg#icon-google" />
+            </svg> -->
           </button>
         </div>
+        <!-- ----------------2--------------- -->
       </article>
-      <img class="main-image" src="assets/mobile.png" />
+
+      <!-- ----------------3--------------- -->
+      <!-- Тут теж псується якість, якщо робити це однією картинкою -->
+      <!-- Краще так: -->
+      <div class="phone-image-wrapper">
+        <img class="phone-image" src="./images/iPhone.png" alt="iPhone" />
+        <img class="avatar-image" src="./images/avatar.png" alt="Avatar" />
+        <div class="notification-wrapper notification-blue">
+          <!-- Додала через awesome icons, бо через svg не відображає правильно іконку -->
+          <i class="fa-solid fa-circle-check fa-xl" style="color: #ffffff"></i>
+          <p>Accept Customer Ride Request</p>
+        </div>
+        <div class="notification-wrapper notification-red">
+          <i class="fa-solid fa-circle-check fa-xl" style="color: #ffffff"></i>
+          <p>Earn more money by driving</p>
+        </div>
+      </div>
+      <!-- <img class="main-image" src="assets/mobile.png" /> -->
+      <!-- ----------------3--------------- -->
     </main>
     <script
       src="https://kit.fontawesome.com/a0ad2d072a.js"
