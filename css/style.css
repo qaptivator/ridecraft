@@ -72,7 +72,10 @@
 /* MAIN */
 
 .main {
-  background-color: var(--tonal-background);
+  background-image: url(/assets/main-bg.jpg);
+  /*background-color: var(--tonal-background);*/
+  background-color: rgba(225, 244, 255, 0.95);
+  background-blend-mode: lighten;
   width: 100%;
   height: 100%;
   display: flex;
@@ -80,5 +83,41 @@
   align-items: center;
   /* top right left bottom */
   /*padding: 198px 136px 206px 126px;*/
-  padding: 150px 136px 206px 126px;
+  padding: 100px 136px 50px 126px;
+}
+
+.main .main-image {
+  background-color: transparent;
+  width: 50%;
+  height: 50%;
+}
+
+.main .main-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+}
+
+.main .main-article h1 {
+  color: var(--dark-color);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.main .main-article p {
+  color: var(--second-dark-color);
+  margin-bottom: 3rem;
+}
+
+.main .main-article .download-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.main .main-article .download-buttons button {
+  border: 0px;
+  background: inherit;
+  max-width: 50%;
 }
