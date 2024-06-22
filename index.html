@@ -14,6 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Молодець, що завантажив шрифти :) -->
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -24,9 +28,12 @@
     <header class="header inter-font">
       <!-- ----------------1--------------- -->
       <!-- logo -->
-      <button class="logo" type="button">
-        <img src="assets/favicon.png" />
-        <span>RideEasy</span>
+      <button class="header-logo" type="button">
+        <!--<img src="assets/favicon.png" />
+        <span>RideEasy</span>-->
+        <svg class="logo" width="124px" height="40px">
+          <use href="./images/icons/sprite.svg#icon-logo" />
+        </svg>
         <!-- Даний лого (а також всі іконки)
         краще задати як svg картинку, бо
         вона має кращу якість при різних розмірах екрану -->
@@ -40,7 +47,7 @@
       <!-- ----------------1--------------- -->
 
       <!-- actions -->
-      <ul class="actions space-x-8">
+      <ul class="header-actions space-x-8">
         <li>
           <button type="button">Home</button>
         </li>
@@ -56,7 +63,7 @@
       </ul>
 
       <!-- sign up -->
-      <div class="signup">
+      <div class="header-signup">
         <button type="button">Sign up</button>
       </div>
     </header>
@@ -74,23 +81,34 @@
 
         <!-- ----------------2--------------- -->
         <div class="download-buttons">
-          <button type="button" class="download-button app-store">
-            <img src="/assets/app-store.png" />
+          <button type="button" class="download-button app-store mr-4">
+            <!--<img src="/assets/app-store.png" />-->
             <!-- Зміни на svg -->
-            <!-- <svg class="icon-apple" width="33px" height="38px">
+            <svg class="icon-apple" width="33px" height="38px">
               <use href="./images/icons/sprite.svg#icon-apple" />
-            </svg> -->
+            </svg>
             <!-- І сам текст, та стилі колір фону, border-radius: 10px;, 
             padding: 18px 28px;, display: flex;, column-gap: 25px;
             краще додати вручну, тоді буде краща якість тексту 
             та країв елементу -->
             <!-- Задай ці стилі для класу download-button -->
+            <div class="download-button-text montserrat-font">
+              <span>Download on the</span>
+              <p>App Store</p>
+            </div>
           </button>
-          <button type="button" class="download-button google-play">
-            <img src="/assets/google-play.png" />
-            <!-- <svg class="icon-google-play" width="35px" height="38px">
+          <button
+            type="button"
+            class="download-button google-play montserrat-font"
+          >
+            <!--<img src="/assets/google-play.png" />-->
+            <svg class="icon-google-play" width="35px" height="38px">
               <use href="./images/icons/sprite.svg#icon-google" />
-            </svg> -->
+            </svg>
+            <div class="download-button-text montserrat-font">
+              <span>Download on the</span>
+              <p>Google Play</p>
+            </div>
           </button>
         </div>
         <!-- ----------------2--------------- -->
@@ -104,11 +122,17 @@
         <img class="avatar-image" src="./images/avatar.png" alt="Avatar" />
         <div class="notification-wrapper notification-blue">
           <!-- Додала через awesome icons, бо через svg не відображає правильно іконку -->
-          <i class="fa-solid fa-circle-check fa-xl" style="color: #ffffff"></i>
+          <i
+            class="fa-solid fa-circle-check fa-xl"
+            style="color: #ffffff; margin-right: 8px"
+          ></i>
           <p>Accept Customer Ride Request</p>
         </div>
         <div class="notification-wrapper notification-red">
-          <i class="fa-solid fa-circle-check fa-xl" style="color: #ffffff"></i>
+          <i
+            class="fa-solid fa-circle-check fa-xl"
+            style="color: #ffffff; margin-right: 8px"
+          ></i>
           <p>Earn more money by driving</p>
         </div>
       </div>
